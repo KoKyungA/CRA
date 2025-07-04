@@ -59,6 +59,7 @@ enum Engine
     GM,
     TOYOTA,
     WIA,
+    BRAKE_ENGINE,
     MAX_ENGINE_TYPE
 };
 
@@ -406,7 +407,7 @@ void runProducedCar()
     }
     else
     {
-        if (stack[Engine_Q] == MAX_ENGINE_TYPE)
+        if (stack[Engine_Q] == BRAKE_ENGINE)
         {
             printf("엔진이 고장나있습니다.\n");
             printf("자동차가 움직이지 않습니다.\n");
