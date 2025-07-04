@@ -209,7 +209,7 @@ public:
         fgets(userInputString, sizeof(userInputString), stdin);
 
         // 엔터 개행문자 제거
-        car.removeNewLine(userInputString);
+        carAssemble.getCar().removeNewLine(userInputString);
     }
 
     void printErrorCode(ErrorCode errorCode) {
@@ -240,22 +240,22 @@ public:
 
     void printProducedCar()
     {
-        if (false == car.CheckConstraints())
+        if (false == carAssemble.getCar().CheckConstraints())
         {
             printErrorConstraints();
         }
         else
         {
-            if (BRAKE_ENGINE == car.GetEngineType())
+            if (BRAKE_ENGINE == carAssemble.getCar().GetEngineType())
             {
                 printEnginError();
             }
             else
             {
-                printCurrentCarType(car.GetCarType());
-                printCurrentEnginType(car.GetEngineType());
-                printCurrentBrakeType(car.GetBrakeType());
-                printCurrentSteeringType(car.GetSteeringType());
+                printCurrentCarType(carAssemble.getCar().GetCarType());
+                printCurrentEnginType(carAssemble.getCar().GetEngineType());
+                printCurrentBrakeType(carAssemble.getCar().GetBrakeType());
+                printCurrentSteeringType(carAssemble.getCar().GetSteeringType());
 
                 printRunCar();
             }
@@ -308,7 +308,7 @@ public:
 
             getUserInputString(userInputString);
 
-            if (car.isExitString(userInputString)) {
+            if (carAssemble.getCar().isExitString(userInputString)) {
                 printExitString();
                 return;
             }
