@@ -32,7 +32,7 @@ public:
         printf(" |                      O  |\n");
         printf(" '-(@)----------------(@)--'\n");
         printf("===============================\n");
-        printf("¾î¶² Â÷·® Å¸ÀÔÀ» ¼±ÅÃÇÒ±î¿ä?\n");
+        printf("ì–´ë–¤ ì°¨ëŸ‰ íƒ€ì…ì„ ì„ íƒí• ê¹Œìš”?\n");
         printf("1. Sedan\n");
         printf("2. SUV\n");
         printf("3. Truck\n");
@@ -40,18 +40,18 @@ public:
 
     void showSelectEngineTypeMenu() {
         printf(CLEAR_SCREEN);
-        printf("¾î¶² ¿£ÁøÀ» Å¾ÀçÇÒ±î¿ä?\n");
-        printf("0. µÚ·Î°¡±â\n");
+        printf("ì–´ë–¤ ì—”ì§„ì„ íƒ‘ì¬í• ê¹Œìš”?\n");
+        printf("0. ë’¤ë¡œê°€ê¸°\n");
         printf("1. GM\n");
         printf("2. TOYOTA\n");
         printf("3. WIA\n");
-        printf("4. °íÀå³­ ¿£Áø\n");
+        printf("4. ê³ ì¥ë‚œ ì—”ì§„\n");
     }
 
     void showSelectBrakeSystemMenu() {
         printf(CLEAR_SCREEN);
-        printf("¾î¶² Á¦µ¿ÀåÄ¡¸¦ ¼±ÅÃÇÒ±î¿ä?\n");
-        printf("0. µÚ·Î°¡±â\n");
+        printf("ì–´ë–¤ ì œë™ì¥ì¹˜ë¥¼ ì„ íƒí• ê¹Œìš”?\n");
+        printf("0. ë’¤ë¡œê°€ê¸°\n");
         printf("1. MANDO\n");
         printf("2. CONTINENTAL\n");
         printf("3. BOSCH\n");
@@ -59,29 +59,29 @@ public:
 
     void showSelectSteeringSystmeMenu() {
         printf(CLEAR_SCREEN);
-        printf("¾î¶² Á¶ÇâÀåÄ¡¸¦ ¼±ÅÃÇÒ±î¿ä?\n");
-        printf("0. µÚ·Î°¡±â\n");
+        printf("ì–´ë–¤ ì¡°í–¥ì¥ì¹˜ë¥¼ ì„ íƒí• ê¹Œìš”?\n");
+        printf("0. ë’¤ë¡œê°€ê¸°\n");
         printf("1. BOSCH\n");
         printf("2. MOBIS\n");
     }
 
     void showRunTest() {
         printf(CLEAR_SCREEN);
-        printf("¸ÚÁø Â÷·®ÀÌ ¿Ï¼ºµÇ¾ú½À´Ï´Ù.\n");
-        printf("¾î¶² µ¿ÀÛÀ» ÇÒ±î¿ä?\n");
-        printf("0. Ã³À½ È­¸éÀ¸·Î µ¹¾Æ°¡±â\n");
+        printf("ë©‹ì§„ ì°¨ëŸ‰ì´ ì™„ì„±ë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+        printf("ì–´ë–¤ ë™ì‘ì„ í• ê¹Œìš”?\n");
+        printf("0. ì²˜ìŒ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸°\n");
         printf("1. RUN\n");
         printf("2. Test\n");
     }
     void printExitString(void) {
-        printf("¹ÙÀÌ¹ÙÀÌ\n");
+        printf("ë°”ì´ë°”ì´\n");
     }
     void printErrorConstraints() {
-        printf("ÀÚµ¿Â÷°¡ µ¿ÀÛµÇÁö ¾Ê½À´Ï´Ù\n");
+        printf("ìë™ì°¨ê°€ ë™ì‘ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤\n");
     }
     void printEnginError() {
-        printf("¿£ÁøÀÌ °íÀå³ªÀÖ½À´Ï´Ù.\n");
-        printf("ÀÚµ¿Â÷°¡ ¿òÁ÷ÀÌÁö ¾Ê½À´Ï´Ù.\n");
+        printf("ì—”ì§„ì´ ê³ ì¥ë‚˜ìˆìŠµë‹ˆë‹¤.\n");
+        printf("ìë™ì°¨ê°€ ì›€ì§ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
     }
 
     void printCurrentCarType(int carType) {
@@ -119,7 +119,7 @@ public:
     }
 
     void printRunCar() {
-        printf("ÀÚµ¿Â÷°¡ µ¿ÀÛµË´Ï´Ù.\n");
+        printf("ìë™ì°¨ê°€ ë™ì‘ë©ë‹ˆë‹¤.\n");
         car.delay(2000);
     }
 
@@ -132,32 +132,32 @@ public:
     {
         if (carType == SEDAN && brakeType == CONTINENTAL)
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : FAIL\n");
-            printf("Sedan¿¡´Â ContinentalÁ¦µ¿ÀåÄ¡ »ç¿ë ºÒ°¡\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : FAIL\n");
+            printf("Sedanì—ëŠ” Continentalì œë™ì¥ì¹˜ ì‚¬ìš© ë¶ˆê°€\n");
         }
         else if (carType == SUV && engineType == TOYOTA)
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : FAIL\n");
-            printf("SUV¿¡´Â TOYOTA¿£Áø »ç¿ë ºÒ°¡\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : FAIL\n");
+            printf("SUVì—ëŠ” TOYOTAì—”ì§„ ì‚¬ìš© ë¶ˆê°€\n");
         }
         else if (carType == TRUCK && engineType == WIA)
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : FAIL\n");
-            printf("Truck¿¡´Â WIA¿£Áø »ç¿ë ºÒ°¡\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : FAIL\n");
+            printf("Truckì—ëŠ” WIAì—”ì§„ ì‚¬ìš© ë¶ˆê°€\n");
         }
         else if (carType == TRUCK && brakeType == MANDO)
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : FAIL\n");
-            printf("Truck¿¡´Â MandoÁ¦µ¿ÀåÄ¡ »ç¿ë ºÒ°¡\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : FAIL\n");
+            printf("Truckì—ëŠ” Mandoì œë™ì¥ì¹˜ ì‚¬ìš© ë¶ˆê°€\n");
         }
         else if (carType == BOSCH_B && steeringType != BOSCH_S)
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : FAIL\n");
-            printf("BoschÁ¦µ¿ÀåÄ¡¿¡´Â BoschÁ¶ÇâÀåÄ¡ ÀÌ¿Ü »ç¿ë ºÒ°¡\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : FAIL\n");
+            printf("Boschì œë™ì¥ì¹˜ì—ëŠ” Boschì¡°í–¥ì¥ì¹˜ ì´ì™¸ ì‚¬ìš© ë¶ˆê°€\n");
         }
         else
         {
-            printf("ÀÚµ¿Â÷ ºÎÇ° Á¶ÇÕ Å×½ºÆ® °á°ú : PASS\n");
+            printf("ìë™ì°¨ ë¶€í’ˆ ì¡°í•© í…ŒìŠ¤íŠ¸ ê²°ê³¼ : PASS\n");
         }
         car.delay(2000);
     }
@@ -165,42 +165,42 @@ public:
     void printCarType(CarType carType)
     {
         if (carType == SEDAN)
-            printf("Â÷·® Å¸ÀÔÀ¸·Î SedanÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("ì°¨ëŸ‰ íƒ€ì…ìœ¼ë¡œ Sedanì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (carType == SUV)
-            printf("Â÷·® Å¸ÀÔÀ¸·Î SUVÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("ì°¨ëŸ‰ íƒ€ì…ìœ¼ë¡œ SUVì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (carType == TRUCK)
-            printf("Â÷·® Å¸ÀÔÀ¸·Î TruckÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("ì°¨ëŸ‰ íƒ€ì…ìœ¼ë¡œ Truckì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         car.delay(800);
     }
 
     void printEnginType(Engine enginType)
     {
         if (enginType == GM)
-            printf("GM ¿£ÁøÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("GM ì—”ì§„ì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (enginType == TOYOTA)
-            printf("TOYOTA ¿£ÁøÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("TOYOTA ì—”ì§„ì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (enginType == WIA)
-            printf("WIA ¿£ÁøÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("WIA ì—”ì§„ì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         car.delay(800);
     }
 
     void printBrakeType(brakeSystem brakeType)
     {
         if (brakeType == MANDO)
-            printf("MANDO Á¦µ¿ÀåÄ¡¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("MANDO ì œë™ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (brakeType == CONTINENTAL)
-            printf("CONTINENTAL Á¦µ¿ÀåÄ¡¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("CONTINENTAL ì œë™ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (brakeType == BOSCH_B)
-            printf("BOSCH Á¦µ¿ÀåÄ¡¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("BOSCH ì œë™ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         car.delay(800);
     }
 
     void printSteeringType(SteeringSystem steeringType)
     {
         if (steeringType == BOSCH_S)
-            printf("BOSCH Á¶ÇâÀåÄ¡¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("BOSCH ì¡°í–¥ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         if (steeringType == MOBIS)
-            printf("MOBIS Á¶ÇâÀåÄ¡¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("MOBIS ì¡°í–¥ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
         car.delay(800);
     }
 
@@ -208,29 +208,29 @@ public:
         showGetInputStringMenu();
         fgets(userInputString, sizeof(userInputString), stdin);
 
-        // ¿£ÅÍ °³Çà¹®ÀÚ Á¦°Å
+        // ì—”í„° ê°œí–‰ë¬¸ì ì œê±°
         car.removeNewLine(userInputString);
     }
 
     void printErrorCode(ErrorCode errorCode) {
         switch (errorCode) {
         case IS_NOT_INTEGER:
-            printf("ERROR :: ¼ıÀÚ¸¸ ÀÔ·Â °¡´É\n");
+            printf("ERROR :: ìˆ«ìë§Œ ì…ë ¥ ê°€ëŠ¥\n");
             break;
         case IS_NOT_CARTYPE:
-            printf("ERROR :: Â÷·® Å¸ÀÔÀº 1 ~ 3 ¹üÀ§¸¸ ¼±ÅÃ °¡´É\n");
+            printf("ERROR :: ì°¨ëŸ‰ íƒ€ì…ì€ 1 ~ 3 ë²”ìœ„ë§Œ ì„ íƒ ê°€ëŠ¥\n");
             break;
         case IS_NOT_ENGINETYPE:
-            printf("ERROR :: ¿£ÁøÀº 1 ~ 4 ¹üÀ§¸¸ ¼±ÅÃ °¡´É\n");
+            printf("ERROR :: ì—”ì§„ì€ 1 ~ 4 ë²”ìœ„ë§Œ ì„ íƒ ê°€ëŠ¥\n");
             break;
         case IS_NOT_BRAKETYPE:
-            printf("ERROR :: Á¦µ¿ÀåÄ¡´Â 1 ~ 3 ¹üÀ§¸¸ ¼±ÅÃ °¡´É\n");
+            printf("ERROR :: ì œë™ì¥ì¹˜ëŠ” 1 ~ 3 ë²”ìœ„ë§Œ ì„ íƒ ê°€ëŠ¥\n");
             break;
         case IS_NOT_STEERINGTYPE:
-            printf("ERROR :: Á¶ÇâÀåÄ¡´Â 1 ~ 2 ¹üÀ§¸¸ ¼±ÅÃ °¡´É\n");
+            printf("ERROR :: ì¡°í–¥ì¥ì¹˜ëŠ” 1 ~ 2 ë²”ìœ„ë§Œ ì„ íƒ ê°€ëŠ¥\n");
             break;
         case IS_NOT_RUNORTEST:
-            printf("ERROR :: Run ¶Ç´Â Test Áß ÇÏ³ª¸¦ ¼±ÅÃ ÇÊ¿ä\n");
+            printf("ERROR :: Run ë˜ëŠ” Test ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒ í•„ìš”\n");
             break;
         default:
             break;
@@ -313,7 +313,7 @@ public:
                 return;
             }
 
-            // ¼ıÀÚ·Î µÈ ´ë´äÀÎÁö È®ÀÎ
+            // ìˆ«ìë¡œ ëœ ëŒ€ë‹µì¸ì§€ í™•ì¸
             ErrorCode errorCode = carAssemble.CheckInputisInterger(userInputString);
             if (errorCode == IS_OK) {
                 int answer = carAssemble.handleNextStep();
