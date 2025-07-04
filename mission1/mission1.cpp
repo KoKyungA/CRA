@@ -2,13 +2,6 @@
 
 #include "gmock/gmock.h"
 
-int main()
-{
-    testing::initgooglemock();
-    return run_all_tests();
-}
-
-#else
 
 #include <stdio.h>
 #include <string.h>
@@ -35,33 +28,47 @@ enum QuestionType
     Run_Test,
 };
 
+enum RunTestType 
+{
+    INIT_RUNTEST_TYPE,
+    RUN,
+    TEST,
+    MAX_RUNTEST_TYPE
+};
+
 enum CarType
 {
-    CARINIT = 0,
+    INIT_CAR_TYPE = 0,
     SEDAN,
     SUV,
-    TRUCK
+    TRUCK,
+    MAX_CAR_TYPE
 };
 
 enum Engine
 {
-    GM = 1,
+    INIT_ENGINE_TYPE = 0,
+    GM,
     TOYOTA,
     WIA,
-    BREAKDOWN
+    MAX_ENGINE_TYPE
 };
 
 enum brakeSystem
 {
-    MANDO = 1,
+    INIT_BRAKE_TYPE = 0,
+    MANDO,
     CONTINENTAL,
-    BOSCH_B
+    BOSCH_B,
+    MAX_BRAKE_TYPE
 };
 
 enum SteeringSystem
 {
-    BOSCH_S = 1,
-    MOBIS
+    INIT_STEERING_TYPE = 0,
+    BOSCH_S,
+    MOBIS,
+    MAX_STEERING_TYPE
 };
 
 void delay(int ms)
@@ -162,25 +169,25 @@ bool CheckInputisInterger(char* userInputString, int currentStep, int& answer) {
         setDelayAndRetVal(delayValue, returnValue);
     }
 
-    if (currentStep == Engine_Q && !(answer >= 0 && answer <= 4))
+    if (currentStep == Engine_Q && !(answer >= INIT_ENGINE_TYPE && answer < MAX_ENGINE_TYPE))
     {
         printf("ERROR :: 엔진은 1 ~ 4 범위만 선택 가능\n");
         setDelayAndRetVal(delayValue, returnValue);
     }
 
-    if (currentStep == brakeSystem_Q && !(answer >= 0 && answer <= 3))
+    if (currentStep == brakeSystem_Q && !(answer >= INIT_BRAKE_TYPE && answer < MAX_BRAKE_TYPE))
     {
         printf("ERROR :: 제동장치는 1 ~ 3 범위만 선택 가능\n");
         setDelayAndRetVal(delayValue, returnValue);
     }
 
-    if (currentStep == SteeringSystem_Q && !(answer >= 0 && answer <= 2))
+    if (currentStep == SteeringSystem_Q && !(answer >= INIT_STEERING_TYPE && answer < MAX_STEERING_TYPE))
     {
         printf("ERROR :: 조향장치는 1 ~ 2 범위만 선택 가능\n");
         setDelayAndRetVal(delayValue, returnValue);
     }
 
-    if (currentStep == Run_Test && !(answer >= 0 && answer <= 2))
+    if (currentStep == Run_Test && !(answer >= INIT_RUNTEST_TYPE && answer < MAX_RUNTEST_TYPE))
     {
         printf("ERROR :: Run 또는 Test 중 하나를 선택 필요\n");
         setDelayAndRetVal(delayValue, returnValue);
@@ -242,12 +249,12 @@ void handleNextStep(const int& answer, int& currentStep) {
         delay(800);
         setCurrentStep(currentStep, Run_Test);
     }
-    else if (currentStep == Run_Test && answer == 1)
+    else if (currentStep == Run_Test && answer == RUN)
     {
         runProducedCar();
         delay(2000);
     }
-    else if (currentStep == Run_Test && answer == 2)
+    else if (currentStep == Run_Test && answer == TEST)
     {
         printf("Test...\n");
         delay(1500);
@@ -391,7 +398,7 @@ void runProducedCar()
     }
     else
     {
-        if (stack[Engine_Q] == BREAKDOWN)
+        if (stack[Engine_Q] == MAX_ENGINE_TYPE)
         {
             printf("엔진이 고장나있습니다.\n");
             printf("자동차가 움직이지 않습니다.\n");
