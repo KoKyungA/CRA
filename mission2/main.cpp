@@ -264,22 +264,22 @@ public:
 
     void printCurrentStatus(int answer) {
         if (carAssemble.getCurStep() == Engine_Q) {
-            printCarType(car.GetCarType());
+            printCarType(carAssemble.getCar().GetCarType());
         }
         if (carAssemble.getCurStep() == brakeSystem_Q) {
-            printEnginType(car.GetEngineType());
+            printEnginType(carAssemble.getCar().GetEngineType());
         }
         if (carAssemble.getCurStep() == SteeringSystem_Q) {
-            printBrakeType(car.GetBrakeType());
+            printBrakeType(carAssemble.getCar().GetBrakeType());
         }
         if (carAssemble.getCurStep() == Run_Test) {
-            printSteeringType(car.GetSteeringType());
+            printSteeringType(carAssemble.getCar().GetSteeringType());
         }
         if (carAssemble.getCurStep() == Run_Test && answer == RUN) {
             printProducedCar();
         }
         if (carAssemble.getCurStep() == Run_Test && answer == TEST) {
-            testProducedCar(car.GetCarType(), car.GetBrakeType(), car.GetEngineType(), car.GetSteeringType());
+            testProducedCar(carAssemble.getCar().GetCarType(), carAssemble.getCar().GetBrakeType(), carAssemble.getCar().GetEngineType(), carAssemble.getCar().GetSteeringType());
         }
     }
 
