@@ -53,14 +53,14 @@ SteeringSystem Car::GetSteeringType() { return steeringType; }
 bool CarAssemble::isNeedToBackStep() {
     bool isNeedToBack = false;
 
-    // Ã³À½À¸·Î µ¹¾Æ°¡±â
+    // ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°€ê¸°
     if (answer == 0 && curStep == Run_Test)
     {
         curStep = QuestionType::CarType_Q;
         isNeedToBack = true;
     }
 
-    // ÀÌÀüÀ¸·Î µ¹¾Æ°¡±â
+    // ì´ì „ìœ¼ë¡œ ëŒì•„ê°€ê¸°
     else if (answer == 0 && curStep >= 1)
     {
         int prevStep = curStep - 1;
@@ -82,7 +82,7 @@ ErrorCode CarAssemble::CheckInputisInterger(char* userInputString) {
     ErrorCode errorCode = ErrorCode::IS_OK;
     int delayValue = 800;
 
-    // ÀÔ·Â¹ŞÀº ¹®ÀÚ°¡ ¼ıÀÚ°¡ ¾Æ´Ï¶ó¸é
+    // ì…ë ¥ë°›ì€ ë¬¸ìê°€ ìˆ«ìê°€ ì•„ë‹ˆë¼ë©´
     if (*checkNumber != '\0')
     {
         errorCode = ErrorCode::IS_NOT_INTEGER;
