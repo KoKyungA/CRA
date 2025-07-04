@@ -122,7 +122,7 @@ public:
     }
 
     int convertStringToInt(char** checkNumber, const char* userInputString) {
-        int answer = strtol(userInputString, checkNumber, 10); // ¹®ÀÚ¿­À» 10Áø¼ö·Î º¯È¯
+        int answer = strtol(userInputString, checkNumber, 10); // Â¹Â®Ã€ÃšÂ¿Â­Ã€Â» 10ÃÃ¸Â¼Ã¶Â·Ã ÂºÂ¯ÃˆÂ¯
 
         return answer;
     }
